@@ -1,0 +1,8 @@
+Python reduce()函数
+
+#    reduce(f, [], a)
+
+reduce中的f函数必须接受两个参数，并对list中的每个元素反复调用f函数
+[m, n, p, q],先传入m和n，将结果和p传入，再将结果和q传入，最后得到结果并返回
+
+Reduce中的第三个参量a是计算的初始值
