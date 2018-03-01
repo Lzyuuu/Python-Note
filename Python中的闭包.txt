@@ -1,0 +1,30 @@
+Python中的闭包
+
+# Program Start
+def calc_sum(lst):
+    def lazy_sum():
+        return sum(lst)
+    return lazy_sum
+
+# 这里没办法把lazy_sum()移到calc_sum()函数外，因为lazy_sum()函数引用了calc_sum的参数
+
+# 像这种内层函数引用了外层函数的变量（参数也算变量），然后返回内层函数的情况，称为闭包
+
+# 闭包的特点是返回的函数引用了外部函数的局部变量，因此要确保局部变量在函数返回后不能变
+
+# Program Start
+def count():
+    fs = []
+    for i in range(1, 4):
+        def f(i):
+            def g():
+                return i * i
+            return g
+        r = f(i)
+        fs.append(r)
+    return fs
+
+f1, f2, f3 = count()
+# f1 = count()[0], f2 = count()[1], f3 = count()[2]
+print f1(), f2(), f3()
+        
