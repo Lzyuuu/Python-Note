@@ -15,7 +15,9 @@ one = Coordinate(100, 200)
 two = Coordinate(300, 200)
 
 result = add(one, two)
+result2 = sub(one, two)
 
 print(one)
 print(two)
 print(result)
+print(result2)
