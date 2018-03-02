@@ -3,6 +3,7 @@ Python中的Map( )函数
 通过f函数对list中的元素进行处理，并返回一个新list
 函数f可提前进行定义，比如平方，开方等
 
+
 例程：
 def format_name(s):
     return s.capitalize()
