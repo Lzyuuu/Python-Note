@@ -93,4 +93,5 @@ def factorials(n):
     return functools.reduce(lambda x, y : x * y, range(1, n+1))
 
 factorials(50)
+
 print(factorials.__name__)
