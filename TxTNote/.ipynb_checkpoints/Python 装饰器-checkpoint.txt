@@ -1,0 +1,24 @@
+装饰器
+
+# 装饰器其实就是一个以函数作为参数并返回一个替换函数的可执行函数
+
+# Program Start
+>>> def outer(some_func):
+...     def inner():
+...         print(“before some_func”)
+...         rec = some_fuc()
+...         return rec + 1
+...     return inner()
+
+>>> def foo():
+...     return 1
+
+>>> decorated = outer(foo)
+>>> decorated()
+
+before some_func
+2
+
+‘’‘
+首先，定义了一个带单个参数 some_func 的名为 outer 的函数。然后在 outer 内部定义了一个内嵌函数 inner。inner 函数将打印一行字符串然后调用 some_func，然后返回 some_fuc 中的结果加1。
+’‘’
